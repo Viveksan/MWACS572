@@ -1,0 +1,16 @@
+{
+  "name": "question-1",
+  "version": "1.0.0",
+  "description": "1- Write an express server that listens to port 5000. Submit your code or a link to your personal GitHub where you have your code. Also, submit a screenshot.",
+  "main": "appQ1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node appQ1.js"
+  },
+
+  "author": "Vivek Sanilkar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
