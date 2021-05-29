@@ -1,0 +1,21 @@
+<H1>{{vm.title}}</H1>
+<ul>
+    <li ng-repeat="movie in vm.movies">
+        <a ng-href="#/movie/{{movie._id}}">{{movie.title}}</a>
+        <button type="button" id="delete" class="btn btn-danger" ng-click="vm.deleteMovie(movie._id)">Delete</button>
+    </li>
+</ul>
+<form name="vm.movieForm" ng-submit="vm.addMovie()">
+
+    Add a new movie: <br/>
+
+    Title: <input type="text" name="title" required ng-model="vm.newMovieTitle" style="color:black"/><BR/>
+
+    Year: <input type="text" name="year" required ng-model="vm.newMovieYear" style="color:black"/><BR/>
+
+    Genre: <input type="text" name="title" required ng-model="vm.newMovieGenre" style="color:black"/><BR/>
+
+    <button type="submit" class="btn-success">Add Movie</button><br/>
+    
+
+</form>

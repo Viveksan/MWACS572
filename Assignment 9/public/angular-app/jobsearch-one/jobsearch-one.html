@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="VivekSanilkar">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/cerulean/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EmRcsPP774S9MOi4ywB+JXUWjYnBdyInMzG2XsC5siZEUpexqxOMJW358dCYEjPu" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <title>Mean Job Search App</title>
+</head>
+<H1>Job Information</H1>
+<p>
+Job Title: {{vm.jobs.title}}<br/>
+Salary: {{vm.jobs.salary | currency}}<br/>
+Unit: {{vm.jobs.unit}}<br/>
+Street: {{vm.jobs.street}}<br/>
+Pincode: {{vm.jobs.pincode}}<br/>
+Description: {{vm.jobs.description}}<br/>
+Experience: {{vm.jobs.experience}}<br/>
+Skills: {{vm.jobs.skills}}<br/>
+PostDate: {{vm.jobs.postDate | date: 'shortDate'}}<br/>
+</p>
+<form name="vm.updateJobsForm" ng-submit="vm.updateJob()">
+
+    Update this Job<br/>
+
+    Title: <input type="text" name="title" required ng-model="vm.newJobTitle" style="color:black"/><BR/>
+
+    Salary: <input type="text" name="salary" required ng-model="vm.newJobSalary" style="color:black"/><BR/>
+
+    <div>
+        Location:<br/>
+        Unit: <input type="text" name="unit" required ng-model="vm.newJobAddressUnit" style="color:black"/><BR/>
+        Street: <input type="text" name="street" required ng-model="vm.newJobAddressStreet" style="color:black"/><BR/>
+        Pincode: <input type="text" name="pincode" required ng-model="vm.newJobAddressPincode" style="color:black"/><BR/>
+    </div>
+
+
+    Description: <input type="text" name="description" required ng-model="vm.newJobDescription" style="color:black"/><BR/>
+
+    Experience: <input type="text" name="experience" required ng-model="vm.newJobExperience" style="color:black"/><BR/>
+
+    Skills: <input type="text" name="skills" required ng-model="vm.newJobSkills" style="color:black"/><BR/>
+
+    PostDate: <input type="date" name="postDate" required ng-model="vm.newJobPostDate" style="color:black"/><BR/>
+
+
+    <button type="submit" ng-click="vm.updateJob(vm.jobs._id)">Update Job</button><br/>
+
+</form>
+

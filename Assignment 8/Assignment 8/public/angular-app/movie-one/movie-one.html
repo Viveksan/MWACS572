@@ -1,0 +1,19 @@
+<H1> Movie Information: </H1>
+
+<p>Movie Title: {{vm.movie.title}}<br/>
+Year: {{vm.movie.year}}<br/>
+Genre: {{vm.movie.genre}}</p>
+
+<form name="vm.updateMovieForm" ng-submit="vm.updateMovie()">
+
+    To Update a Movie: <br/>
+
+    Title: <input type="text" name="title" required ng-model="vm.newMovieTitle" style="color:black"/><BR/>
+
+    Year: <input type="text" name="year" required ng-model="vm.newMovieYear" style="color:black"/><BR/>
+
+    Genre: <input type="text" name="genre" required ng-model="vm.newMovieGenre" style="color:black"/><BR/>
+
+    <button type="submit" class="btn-success" ng-click="vm.updateMovie(vm.movie._id)">Update Movie</button><br/>
+    
+</form>

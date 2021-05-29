@@ -1,0 +1,5 @@
+<H1>{{vm.title}}</H1>
+<ul>
+    <li ng-repeat="movie in vm.movies">
+        <a ng-href="#/movie/{{movie._id}}">{{movie.title}}</a></li>
+</ul>

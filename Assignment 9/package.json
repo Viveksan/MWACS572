@@ -1,0 +1,25 @@
+{
+  "name": "mean-jobsearch",
+  "version": "1.0.0",
+  "description": "Job Search",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "MEAN",
+    "APP",
+    "JOB SEARCH"
+    
+  ],
+  "author": "VIVEK SANILKAR",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.12.10"
+  }
+}

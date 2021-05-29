@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="meanMovies">
+    <head>
+        <title>MEAN Movies</title>
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/node_modules/angular-route/angular-route.js"></script>
+        <script src="app.js"></script>
+        <script src="movie-list/movie-list-controller.js"></script>
+        <script src="movie-one/movie-one-controller.js"></script>
+        <script src="movie-data-factory/movie-data-factory.js"></script>
+    </head>
+    <body>
+        Before ng-view
+        <div ng-view></div>
+        After ng-view
+    </body>
+</html>
